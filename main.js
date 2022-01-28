@@ -4,6 +4,25 @@ const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
 
+let likeButtons = document.getElementsByClassName('like');
+
+function addlikeButton(array){
+  for (const elemten of likeButtons) {
+    elemten.addEventListener('click', (e) => {
+        if (e.target.style.color !== 'red') {
+          e.target.style.color ='red'
+        } else if(e.target.style.color === 'red'){
+          e.target.style.color = 'black'
+        }
+    })
+    
+  }
+}
+addlikeButton(likeButtons)
+
+
+
+
 
 
 
